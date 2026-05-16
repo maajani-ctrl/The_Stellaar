@@ -4,41 +4,43 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-black">
       {/* Cinematic Video Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0">
         <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/assets/Swimming_Pool.jpeg"
-        className="absolute min-w-full min-h-full object-cover opacity-60"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/assets/Swimming_Pool.jpeg"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
         >
-
           <source src="/assets/Intro_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
         {/* Luxury Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black" />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-[1]" />
+        <div className="absolute inset-0 bg-black/50 z-[1]" />
+        
+        {/* Extra grain/texture for premium feel */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-[1] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         {/* Glow Effects */}
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#D4AF37]/10 blur-[120px] rounded-full animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#D4AF37]/10 blur-[150px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-6 md:px-12 w-full max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <span className="text-sm md:text-base font-mono tracking-[0.3em] text-[#D4AF37] uppercase mb-4 block">
+          <span className="text-[10px] sm:text-xs md:text-base font-mono tracking-[0.15em] md:tracking-[0.3em] text-[#D4AF37] uppercase mb-4 block">
             NAGPUR&apos;S NEW LIFESTYLE DESTINATION
           </span>
-          <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-6 text-white uppercase italic">
+          <h1 className="text-3xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6 text-white uppercase italic leading-none">
             <span className="text-[#D4AF37]">STELLAAR</span>
           </h1>
         </motion.div>
@@ -48,8 +50,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
         >
-          <p className="text-xl md:text-3xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
-            Where Luxury Meets Lifestyle. <br className="hidden md:block" />
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-zinc-400 max-w-4xl mx-auto font-light leading-relaxed">
+            Where Luxury Meets Lifestyle. <br className="hidden sm:block" />
             <span className="text-white font-medium">Live Premium. Belong Exclusive.</span>
           </p>
         </motion.div>
@@ -58,11 +60,11 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-12"
+          className="mt-8 md:mt-12"
         >
           <a
             href="#membership"
-            className="inline-block px-10 py-5 bg-[#D4AF37] text-black font-bold rounded-full hover:bg-[#B8962E] transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+            className="inline-block px-8 py-4 md:px-10 md:py-5 bg-[#D4AF37] text-black font-bold rounded-full hover:bg-[#B8962E] transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)] text-sm md:text-base"
           >
             Join the Elite Community
           </a>

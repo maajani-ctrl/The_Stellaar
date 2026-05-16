@@ -1,33 +1,88 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Facilities from '@/components/Gallery'
 import Membership from '@/components/Newsletter'
+import { Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-black/20 border-b border-white/5">
-        <div className="flex items-center gap-4">
+      <nav className="fixed top-0 w-full z-50 px-4 md:px-12 py-4 flex justify-between items-center backdrop-blur-md bg-black/20 border-b border-white/5">
+        <div className="flex items-center gap-2 md:gap-4">
           <Image 
             src="/assets/Logo_no_Back.png" 
             alt="Stellaar Logo" 
             width={180} 
             height={60} 
-            className="h-14 w-auto object-contain"
+            className="h-10 md:h-14 w-auto object-contain"
+            priority
           />
         </div>
-        <div className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-bold">
+        
+        {/* Desktop Nav - Hidden on Mobile */}
+        <div className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-bold">
           <a href="#about" className="hover:text-[#D4AF37] transition-colors">About</a>
           <a href="#facilities" className="hover:text-[#D4AF37] transition-colors">Amenities</a>
           <a href="#membership" className="hover:text-[#D4AF37] transition-colors">Membership</a>
           <a href="#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a>
         </div>
-        <a href="#membership" className="px-5 py-2 border border-[#D4AF37] text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold rounded-full hover:bg-[#D4AF37] hover:text-black transition-all">
-          Inquire
-        </a>
+
+        <div className="flex items-center gap-2 md:gap-4">
+          <a href="#membership" className="px-4 py-2 md:px-5 md:py-2 border border-[#D4AF37] text-[#D4AF37] text-[8px] md:text-[10px] uppercase tracking-widest font-bold rounded-full hover:bg-[#D4AF37] hover:text-black transition-all">
+            Inquire
+          </a>
+          
+          {/* Mobile Menu Toggle */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden text-[#D4AF37] p-1"
+          >
+            {isMenuOpen ? <X size={20} className="md:w-6 md:h-6" /> : <Menu size={20} className="md:w-6 md:h-6" />}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[60] bg-black flex flex-col items-center justify-center gap-8 text-2xl font-bold uppercase tracking-widest"
+          >
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-6 right-6 text-[#D4AF37]"
+            >
+              <X size={32} />
+            </button>
+            <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">About</a>
+            <a href="#facilities" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Amenities</a>
+            <a href="#membership" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Membership</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Contact</a>
+            
+            <div className="mt-12">
+              <Image 
+                src="/assets/Logo_no_Back.png" 
+                alt="Stellaar Logo" 
+                width={150} 
+                height={50} 
+                className="opacity-50"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Hero />
       <About />
@@ -35,8 +90,8 @@ export default function Home() {
       <Membership />
 
       {/* Contact / Footer Section */}
-      <footer id="contact" className="py-24 px-6 md:px-12 border-t border-zinc-900 bg-black">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-16">
+      <footer id="contact" className="py-16 md:py-24 px-6 md:px-12 border-t border-zinc-900 bg-black">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 md:gap-16">
           <div className="lg:col-span-2">
             <Image 
               src="/assets/Logo_no_Back.png" 
@@ -63,8 +118,8 @@ export default function Home() {
           </div>
           
           <div>
-            <h5 className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-8">Location</h5>
-            <p className="text-zinc-400 leading-loose">
+            <h5 className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">Location</h5>
+            <p className="text-zinc-400 leading-loose text-sm md:text-base">
               Ajni, Nagpur,<br />
               Maharashtra 440003<br />
               India
@@ -73,17 +128,17 @@ export default function Home() {
           </div>
 
           <div>
-            <h5 className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-8">Connect</h5>
-            <p className="text-zinc-400 mb-2">Member Inquiries:</p>
-            <p className="text-xl font-semibold mb-6">+91 7888005995</p>
-            <p className="text-zinc-400 mb-2">Support:</p>
-            <p className="text-xl font-semibold">+91 8668647116</p>
+            <h5 className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">Connect</h5>
+            <p className="text-zinc-400 mb-2 text-sm">Member Inquiries:</p>
+            <p className="text-lg md:text-xl font-semibold mb-6">+91 7888005995</p>
+            <p className="text-zinc-400 mb-2 text-sm">Support:</p>
+            <p className="text-lg md:text-xl font-semibold">+91 8668647116</p>
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto mt-24 pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-zinc-600 text-sm">© 2026 Stellaar Design Studio. All rights reserved.</p>
-          <div className="flex gap-8 text-zinc-400 text-[10px] uppercase tracking-widest font-bold">
+        <div className="max-w-7xl mx-auto mt-16 md:mt-24 pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-zinc-600 text-xs md:text-sm text-center md:text-left">© 2026 Stellaar Design Studio. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-zinc-400 text-[9px] md:text-[10px] uppercase tracking-widest font-bold">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
@@ -94,7 +149,7 @@ export default function Home() {
       <a 
         href="https://wa.me/917888005995" 
         target="_blank" 
-        className="fixed bottom-10 right-10 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-[100]"
+        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-[100]"
       >
         <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.48s3.481 5.229 3.481 8.404c0 6.556-5.332 11.888-11.888 11.888-2.016 0-3.995-.512-5.756-1.487l-6.229 1.696zm6.136-4.22c1.604.953 3.146 1.455 4.717 1.455 5.394 0 9.782-4.388 9.782-9.782 0-2.612-1.017-5.067-2.862-6.913-1.846-1.846-4.301-2.863-6.913-2.863-5.394 0-9.783 4.388-9.783 9.782 0 1.954.582 3.518 1.682 5.067l-1.008 3.682 3.787-.991zM11.9 14.1c-.2-.1-.4-.1-.6-.2-.4-.2-.8-.4-1.1-.7-.3-.3-.6-.7-.8-1.1-.1-.2-.2-.4-.2-.6 0-.2.1-.4.2-.6.1-.2.2-.4.3-.5.1-.1.2-.2.2-.3s.1-.2 0-.3c-.1-.1-.4-.9-.5-1.2-.1-.3-.2-.6-.3-.7-.1-.1-.2-.1-.3-.1s-.3 0-.5.1c-.2 0-.4.1-.6.3-.2.2-.4.4-.5.7-.1.3-.2.6-.2.9 0 .6.2 1.2.5 1.8.3.6.7 1.1 1.2 1.6.5.5 1.1.9 1.7 1.2.6.3 1.2.5 1.9.5.3 0 .6-.1.9-.2.3-.1.5-.3.7-.5.2-.2.3-.4.3-.6.1-.2.1-.4.1-.5 0-.1 0-.2-.1-.3z"/></svg>
       </a>

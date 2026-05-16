@@ -12,7 +12,7 @@ fi
 
 # Function to run development mode
 run_dev() {
-    echo "🛠️ Starting Development Server..."
+    echo "🛠️ Starting Development Server on network..."
     npm run dev
 }
 

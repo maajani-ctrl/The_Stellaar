@@ -50,23 +50,23 @@ const facilities = [
 
 export default function Facilities() {
   return (
-    <section id="facilities" className="py-32 px-6 md:px-12 bg-[#0a0a0a]">
+    <section id="facilities" className="py-20 md:py-32 px-4 md:px-12 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20">
           <div className="max-w-2xl">
-            <h2 className="text-sm font-mono text-[#D4AF37] uppercase tracking-[0.5em] mb-4">World-Class Amenities</h2>
-            <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">LUXURY REDEFINED</h3>
-            <p className="text-zinc-500 text-lg leading-relaxed">
+            <h2 className="text-xs md:text-sm font-mono text-[#D4AF37] uppercase tracking-[0.5em] mb-4">World-Class Amenities</h2>
+            <h3 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight">LUXURY REDEFINED</h3>
+            <p className="text-zinc-500 text-base md:text-lg leading-relaxed">
               At Stellaar, every detail is crafted to bring together luxury, wellness, dining, entertainment, and community under one roof.
             </p>
           </div>
-          <div className="mt-8 md:mt-0">
-            <span className="text-6xl font-bold text-zinc-900 select-none">EST. 2026</span>
+          <div className="mt-4 md:mt-0">
+            <span className="text-3xl md:text-6xl font-bold text-zinc-900 select-none">EST. 2026</span>
           </div>
         </div>
 
         {/* Tour of Stellaar Video Section - Side by Side Layout */}
-        <div className="mb-40 grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
+        <div className="mb-24 md:mb-40 grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -74,8 +74,8 @@ export default function Facilities() {
             transition={{ duration: 1 }}
             className="lg:col-span-3 relative group"
           >
-            <div className="mb-6">
-              <h4 className="text-xl font-bold tracking-widest text-[#D4AF37] uppercase">Tour of Stellaar</h4>
+            <div className="mb-4 md:mb-6">
+              <h4 className="text-lg md:text-xl font-bold tracking-widest text-[#D4AF37] uppercase">Tour of Stellaar</h4>
             </div>
             <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl">
               <video
@@ -97,22 +97,22 @@ export default function Facilities() {
             transition={{ duration: 1, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <h4 className="text-[#D4AF37] font-mono text-sm tracking-widest uppercase mb-4">The Experience</h4>
-            <h5 className="text-3xl font-bold mb-6 tracking-tight">A CINEMATIC JOURNEY</h5>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            <h4 className="text-[#D4AF37] font-mono text-xs md:text-sm tracking-widest uppercase mb-4">The Experience</h4>
+            <h5 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 tracking-tight">A CINEMATIC JOURNEY</h5>
+            <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-6">
               Step inside Nagpur&apos;s most exclusive lifestyle destination. This tour showcases the meticulous craftsmanship and world-class amenities that define Stellaar.
             </p>
-            <p className="text-zinc-500 mb-8 leading-relaxed">
+            <p className="text-zinc-500 text-sm md:text-base mb-8 leading-relaxed">
               From our state-of-the-art wellness zones to our refined dining spaces, discover why Stellaar is the new benchmark for premium family living and elite networking.
             </p>
             <div className="flex items-center gap-4 text-[#D4AF37]">
               <div className="w-12 h-[1px] bg-[#D4AF37]" />
-              <span className="text-xs uppercase font-bold tracking-widest">Experience the standard</span>
+              <span className="text-[10px] md:text-xs uppercase font-bold tracking-widest">Experience the standard</span>
             </div>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           {facilities.map((facility, index) => (
             <motion.div
               key={facility.id}
@@ -130,18 +130,18 @@ export default function Facilities() {
                   height={750}
                   className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
-                <div className="absolute top-6 left-6">
-                  <span className="bg-[#D4AF37] text-black text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase">
+                <div className="absolute top-4 left-4 md:top-6 md:left-6">
+                  <span className="bg-[#D4AF37] text-black text-[8px] md:text-[10px] font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full tracking-widest uppercase">
                     {facility.tag}
                   </span>
                 </div>
               </div>
-              <div className="mt-8 flex justify-between items-start">
+              <div className="mt-6 md:mt-8 flex justify-between items-start">
                 <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-3 group-hover:text-[#D4AF37] transition-colors">{facility.title}</h3>
-                  <p className="text-zinc-500 max-w-md leading-relaxed">{facility.description}</p>
+                  <h3 className="text-xl md:text-3xl font-semibold mb-2 md:mb-3 group-hover:text-[#D4AF37] transition-colors">{facility.title}</h3>
+                  <p className="text-zinc-500 text-sm md:text-base max-w-md leading-relaxed">{facility.description}</p>
                 </div>
-                <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block">
                   <div className="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </div>
