@@ -60,7 +60,7 @@ export default function Membership() {
           <h2 className="text-[#D4AF37] font-mono tracking-widest uppercase mb-4">Limited Membership Open</h2>
           <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">JOIN THE ELITE</h3>
           <p className="text-zinc-500 max-w-2xl mx-auto text-lg leading-relaxed">
-            Become part of Nagpur's most premium family club. Elevate your lifestyle with exclusive access to world-class wellness, dining, and community.
+            Become part of Nagpur&apos;s most premium family club. Elevate your lifestyle with exclusive access to world-class wellness, dining, and community.
           </p>
         </div>
 

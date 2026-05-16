@@ -36,7 +36,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <span className="text-sm md:text-base font-mono tracking-[0.3em] text-[#D4AF37] uppercase mb-4 block">
-            Nagpur's New Lifestyle Destination
+            NAGPUR&apos;S NEW LIFESTYLE DESTINATION
           </span>
           <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-6 text-white uppercase italic">
             <span className="text-[#D4AF37]">STELLAAR</span>
@@ -50,7 +50,7 @@ export default function Hero() {
         >
           <p className="text-xl md:text-3xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
             Where Luxury Meets Lifestyle. <br className="hidden md:block" />
-            <span className="text-white">Live Premium. Belong Exclusive.</span>
+            <span className="text-white font-medium">Live Premium. Belong Exclusive.</span>
           </p>
         </motion.div>
 

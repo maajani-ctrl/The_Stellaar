@@ -100,7 +100,7 @@ export default function Facilities() {
             <h4 className="text-[#D4AF37] font-mono text-sm tracking-widest uppercase mb-4">The Experience</h4>
             <h5 className="text-3xl font-bold mb-6 tracking-tight">A CINEMATIC JOURNEY</h5>
             <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-              Step inside Nagpur's most exclusive lifestyle destination. This tour showcases the meticulous craftsmanship and world-class amenities that define Stellaar.
+              Step inside Nagpur&apos;s most exclusive lifestyle destination. This tour showcases the meticulous craftsmanship and world-class amenities that define Stellaar.
             </p>
             <p className="text-zinc-500 mb-8 leading-relaxed">
               From our state-of-the-art wellness zones to our refined dining spaces, discover why Stellaar is the new benchmark for premium family living and elite networking.
