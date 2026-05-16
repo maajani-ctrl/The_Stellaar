@@ -38,7 +38,7 @@ The website is built using a modern, high-performance tech stack:
 - `public/assets/`: Houses all static media including images, videos, and PDF brochures.
 
 ## Contact Information
-- **Member Inquiries:** +91 7888005995
+- **Member Inquiries:** +91 8668647116
 - **Support:** +91 7888005995
 - **Social Media:** [Instagram](https://www.instagram.com/thestellaarnagpur)
 - **WhatsApp:** [Direct Link](https://wa.me/917888005995)

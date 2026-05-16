@@ -130,9 +130,9 @@ export default function Home() {
           <div>
             <h5 className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">Connect</h5>
             <p className="text-zinc-400 mb-2 text-sm">Member Inquiries:</p>
-            <p className="text-lg md:text-xl font-semibold mb-6">+91 7888005995</p>
+            <p className="text-lg md:text-xl font-semibold mb-6">+91 8668647116</p>
             <p className="text-zinc-400 mb-2 text-sm">Support:</p>
-            <p className="text-lg md:text-xl font-semibold">+91 8668647116</p>
+            <p className="text-lg md:text-xl font-semibold">+91 7888005995</p>
           </div>
         </div>
         
