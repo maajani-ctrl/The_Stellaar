@@ -51,10 +51,10 @@ export default function Footer() {
         </div>
         
         <div className="max-w-7xl mx-auto mt-16 md:mt-24 pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-zinc-600 text-xs md:text-sm text-center md:text-left">© 2026 Stellaar Design Studio. All rights reserved.</p>
+          <p className="text-zinc-600 text-xs md:text-sm text-center md:text-left">© 2026 Triovertical Megaventure Pvt Ltd. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-zinc-400 text-[9px] md:text-[10px] uppercase tracking-widest font-bold">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </footer>
