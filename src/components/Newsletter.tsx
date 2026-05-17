@@ -105,11 +105,11 @@ export default function Membership() {
           src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" 
           alt="Family Lifestyle Background"
           fill
-          className="object-cover opacity-20 brightness-[0.3] grayscale-[0.2]"
+          className="object-cover opacity-100 brightness-100 grayscale-0"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-40" />
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
