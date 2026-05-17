@@ -42,13 +42,26 @@ export default function Membership() {
       })
 
       if (!res.ok) throw new Error('Failed to submit')
+      
+      // WhatsApp message formatting
+      const whatsappNumber = "917888005995"
+      const message = `Name:- ${name}\nEmail:- ${email}\nContact info:- ${phone}`
+      const encodedMessage = encodeURIComponent(message)
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+
       setStatus('success')
+      
+      // Redirect to WhatsApp after a brief delay so the user sees the success state
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank')
+      }, 1500)
+
       setEmail('')
       setName('')
       setPhone('')
     } catch (err) {
       console.error('Error saving inquiry:', err)
-      setStatus('success')
+      setStatus('error')
     }
   }
 
@@ -137,7 +150,10 @@ export default function Membership() {
                 </button>
               </form>
               {status === 'success' && (
-                <p className="mt-6 text-[#D4AF37] font-medium">Thank you. Our concierge will be in touch shortly.</p>
+                <p className="mt-6 text-[#D4AF37] font-medium">Thank you. Redirecting to WhatsApp...</p>
+              )}
+              {status === 'error' && (
+                <p className="mt-6 text-red-500 font-medium">Something went wrong. Please try again or contact us directly.</p>
               )}
 
               <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col items-center">
