@@ -1,7 +1,7 @@
 # Project Summary: The Stellaar Club
 
 ## Overview
-**The Stellaar Club** is a premium family club located in Nagpur, Maharashtra. It represents a modern transformation of the former **Rosetta Elite**, rebranded and upgraded to offer an elite lifestyle destination for families, professionals, and entrepreneurs.
+**The Stellaar Club** is a premium family club located in Nagpur, Maharashtra. It represents a modern lifestyle upgrade, rebranded and enhanced to offer an elite destination for families, professionals, and entrepreneurs in the heart of Nagpur.
 
 ## Core Identity
 - **Tagline:** Luxury Redefined

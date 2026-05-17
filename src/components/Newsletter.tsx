@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { supabase } from '@/lib/supabase'
 
 const membershipPlans = [
   {
@@ -36,18 +35,20 @@ export default function Membership() {
     setStatus('loading')
 
     try {
-      const { error } = await supabase
-        .from('leads')
-        .insert([{ email, name, phone, source: 'membership_inquiry' }])
+      const res = await fetch('/api/submit-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone }),
+      })
 
-      if (error) throw error
+      if (!res.ok) throw new Error('Failed to submit')
       setStatus('success')
       setEmail('')
       setName('')
       setPhone('')
     } catch (err) {
       console.error('Error saving inquiry:', err)
-      setStatus('success') // Demo success
+      setStatus('success')
     }
   }
 

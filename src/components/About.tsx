@@ -34,10 +34,9 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[#D4AF37] font-mono tracking-widest uppercase mb-4 text-xs md:text-sm">Our Legacy & Vision</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tight leading-tight">
-              A NEW UPGRADED IDENTITY OF <span className="text-[#D4AF37]">ROSETTA ELITE</span>
-            </h3>
-            <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed">
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tight leading-tight uppercase">
+              A NEW LIFESTYLE UPGRADED OF <span className="text-[#D4AF37]">NAGPUR</span>
+            </h3>            <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed">
               Stellaar is being transformed into a modern premium family club for Nagpur residents who seek status, lifestyle, wellness, and exclusive experiences.
             </p>
             <div className="space-y-4 md:space-y-6 mb-10">
