@@ -40,7 +40,14 @@ export default function Footer() {
               <p>Ajni, Nagpur</p>
               <p>Maharashtra 440015</p>
             </div>
-            <a href="https://maps.google.com" className="inline-block mt-4 text-[#D4AF37] text-sm font-semibold border-b border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all pb-1">Get Directions</a>
+            <a 
+              href="https://maps.app.goo.gl/6sZ3V9awX6Yvnmy27" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block mt-4 text-[#D4AF37] text-sm font-semibold border-b border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all pb-1"
+            >
+              Get Directions
+            </a>
           </div>
 
           <div>
