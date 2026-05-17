@@ -18,7 +18,7 @@ const facilities = [
   { title: 'Premium Wine & Dine', icon: Wine },
   { title: 'Swimming Pool', icon: Waves },
   { title: 'Modern Gym & Yoga', icon: Dumbbell },
-  { title: 'Grand Royal Hall', icon: Building2 },
+  { title: 'Grand Royal Banquet', icon: Building2 },
   { title: 'Sports & Cards Room', icon: Gamepad2 },
 ]
 
