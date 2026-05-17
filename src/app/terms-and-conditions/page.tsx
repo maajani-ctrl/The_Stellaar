@@ -101,6 +101,8 @@ export default function TermsAndConditions() {
             </p>
             <div className="text-zinc-400 space-y-2 text-sm md:text-base">
               <p className="text-[#D4AF37] font-bold">The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd</p>
+              <p>79, Prashant Nagar,</p>
+              <p>Behind Mount Carmel School,</p>
               <p>Ajni, Nagpur, Maharashtra 440015</p>
               <p>Email: legal@thestellaar.com</p>
               <p>Phone: +91 8668647116</p>

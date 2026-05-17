@@ -97,15 +97,16 @@ export default function PrivacyPolicy() {
 
           <section className="pt-12 border-t border-zinc-800">
             <h2 className="text-2xl font-bold text-white mb-6 uppercase tracking-tight">8. Contact Us</h2>
-            <p className="leading-relaxed mb-6">
-              If you have questions or comments about this policy, you may contact our Data Protection Officer by email or post:
+            <p className="leading-relaxed mb-6 text-sm md:text-base text-zinc-400">
+              If you have questions or comments about this policy, you may contact our administrative office:
             </p>
-            <div className="text-zinc-400 space-y-1">
-              <p className="text-white font-bold">The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd</p>
+            <div className="text-zinc-400 space-y-1 text-sm md:text-base">
+              <p className="text-[#D4AF37] font-bold">The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd</p>
+              <p>79, Prashant Nagar,</p>
+              <p>Behind Mount Carmel School,</p>
               <p>Ajni, Nagpur, Maharashtra 440015</p>
-              <p>India</p>
               <p className="mt-4">Phone: +91 8668647116</p>
-              <p>Email: info@thestellaar.com</p>
+              <p>Email: legal@thestellaar.com</p>
             </div>
           </section>
         </div>

@@ -33,11 +33,13 @@ export default function Footer() {
           
           <div>
             <h5 className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">Location</h5>
-            <p className="text-zinc-400 leading-loose text-sm md:text-base">
-              Ajni, Nagpur,<br />
-              Maharashtra 440015<br />
-              India
-            </p>
+            <div className="text-zinc-400 leading-loose text-sm md:text-base space-y-1">
+              <p className="font-semibold text-zinc-300">A unit of Triovertical Megaventure Pvt Ltd.</p>
+              <p>79, Prashant Nagar,</p>
+              <p>Behind Mount Carmel School,</p>
+              <p>Ajni, Nagpur</p>
+              <p>Maharashtra 440015</p>
+            </div>
             <a href="https://maps.google.com" className="inline-block mt-4 text-[#D4AF37] text-sm font-semibold border-b border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all pb-1">Get Directions</a>
           </div>
 
