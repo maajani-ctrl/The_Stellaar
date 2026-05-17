@@ -60,6 +60,7 @@ export default function Membership() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
+  const [membershipType, setMembershipType] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -71,12 +72,12 @@ export default function Membership() {
       fetch('/api/submit-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone }),
+        body: JSON.stringify({ name, email, phone, membershipType }),
       }).catch(err => console.error('Silent background save failed:', err))
       
       // WhatsApp message formatting
       const whatsappNumber = "917888005995"
-      const message = `Name:- ${name}\nEmail:- ${email}\nContact info:- ${phone}`
+      const message = `Name:- ${name}\nEmail:- ${email}\nContact info:- ${phone}\nMembership Type:- ${membershipType}`
       const encodedMessage = encodeURIComponent(message)
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
 
@@ -86,6 +87,7 @@ export default function Membership() {
       setEmail('')
       setName('')
       setPhone('')
+      setMembershipType('')
 
       // Redirect to WhatsApp using window.location.href for better reliability (avoiding popup blockers)
       setTimeout(() => {
@@ -191,7 +193,7 @@ export default function Membership() {
               <p className="text-zinc-500 text-sm md:text-base mb-8 md:mb-10">Our concierge will contact you with membership details and current founding offers.</p>
               
               <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:gap-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                   <input
                     type="text"
                     value={name}
@@ -208,6 +210,8 @@ export default function Membership() {
                     required
                     className="px-6 py-4 md:px-8 md:py-5 bg-black/50 border border-zinc-700/50 rounded-xl text-white text-sm focus:outline-none focus:border-[#D4AF37] transition-all w-full placeholder:text-zinc-600"
                   />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                   <input
                     type="tel"
                     value={phone}
@@ -216,6 +220,22 @@ export default function Membership() {
                     required
                     className="px-6 py-4 md:px-8 md:py-5 bg-black/50 border border-zinc-700/50 rounded-xl text-white text-sm focus:outline-none focus:border-[#D4AF37] transition-all w-full placeholder:text-zinc-600"
                   />
+                  <div className="relative">
+                    <select
+                      value={membershipType}
+                      onChange={(e) => setMembershipType(e.target.value)}
+                      required
+                      className="px-6 py-4 md:px-8 md:py-5 bg-black/50 border border-zinc-700/50 rounded-xl text-white text-sm focus:outline-none focus:border-[#D4AF37] transition-all w-full appearance-none cursor-pointer text-zinc-400"
+                    >
+                      <option value="" disabled>Select Membership Type</option>
+                      <option value="Blue Membership (1 Year)">Blue Membership (1 Year)</option>
+                      <option value="Silver Membership (3 Years)">Silver Membership (3 Years)</option>
+                      <option value="Gold Membership (5 Years)">Gold Membership (5 Years)</option>
+                    </select>
+                    <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
+                      <svg className="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                  </div>
                 </div>
                 <button
                   type="submit"

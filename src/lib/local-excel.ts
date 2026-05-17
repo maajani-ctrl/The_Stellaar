@@ -7,6 +7,7 @@ export async function appendToLocalExcel(data: {
   name: string;
   email: string;
   phone: string;
+  membership_type?: string;
   source: string;
   created_at: string;
 }) {
@@ -19,13 +20,13 @@ export async function appendToLocalExcel(data: {
   
   // Header
   if (!fileExists) {
-    fs.writeFileSync(csvPath, 'Name,Email,Phone,Source,Created At\n');
+    fs.writeFileSync(csvPath, 'Name,Email,Phone,Membership Type,Source,Created At\n');
   }
 
   // Escape commas for CSV
-  const escape = (str: string) => `"${str.replace(/"/g, '""')}"`;
+  const escape = (str: string) => `"${(str || '').replace(/"/g, '""')}"`;
   
-  const row = `${escape(data.name)},${escape(data.email)},${escape(data.phone)},${escape(data.source)},${escape(data.created_at)}\n`;
+  const row = `${escape(data.name)},${escape(data.email)},${escape(data.phone)},${escape(data.membership_type || '')},${escape(data.source)},${escape(data.created_at)}\n`;
   
   fs.appendFileSync(csvPath, row);
 }

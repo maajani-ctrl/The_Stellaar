@@ -19,6 +19,7 @@ db.exec(`
     name TEXT NOT NULL,
     email TEXT NOT NULL,
     phone TEXT NOT NULL,
+    membership_type TEXT,
     source TEXT DEFAULT 'membership_inquiry',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )
