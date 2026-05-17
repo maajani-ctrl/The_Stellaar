@@ -79,7 +79,6 @@ export default function Hero() {
                 width={1200}
                 height={400}
                 className="w-auto h-full scale-[1.6] object-contain drop-shadow-[0_0_25px_rgba(212,175,55,0.5)] transform-gpu"
-                priority
               />
             </div>
           </div>
