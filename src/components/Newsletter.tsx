@@ -36,7 +36,8 @@ const membershipPlans = [
       "Extended Membership Convenience"
     ],
     color: "#e2e8f0", // Silver/Slate
-    popular: true
+    popular: true,
+    badge: "Elevated Experience"
   },
   {
     name: "Gold Membership",
@@ -52,7 +53,8 @@ const membershipPlans = [
       "Elite Long-Term Experience"
     ],
     color: "#D4AF37", // Gold
-    popular: false
+    popular: true,
+    badge: "Best Experience"
   }
 ]
 
@@ -137,9 +139,9 @@ export default function Membership() {
                 : 'border-zinc-800 bg-zinc-900/40 hover:border-zinc-700'
               }`}
             >
-              {plan.popular && (
+              {plan.badge && (
                 <div className="absolute top-0 right-10 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-tighter shadow-lg">
-                  Elevated Experience
+                  {plan.badge}
                 </div>
               )}
               
