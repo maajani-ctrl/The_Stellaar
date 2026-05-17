@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const membershipPlans = [
   {
@@ -97,8 +98,19 @@ export default function Membership() {
   }
 
   return (
-    <section id="membership" className="py-20 md:py-32 px-4 md:px-12 bg-black relative">
-      <div className="absolute inset-0 bg-[url('/assets/Poster_New.png')] bg-cover bg-center opacity-[0.03] select-none pointer-events-none" />
+    <section id="membership" className="py-24 md:py-40 px-4 md:px-12 bg-black relative overflow-hidden">
+      {/* Cinematic Family Background with Fade */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" 
+          alt="Family Lifestyle Background"
+          fill
+          className="object-cover opacity-20 brightness-[0.3] grayscale-[0.2]"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-60" />
+      </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-20">
