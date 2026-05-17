@@ -26,6 +26,7 @@ export default function Navbar() {
           <a href="#about" className="hover:text-[#D4AF37] transition-colors">About</a>
           <a href="#facilities" className="hover:text-[#D4AF37] transition-colors">Amenities</a>
           <a href="#membership" className="hover:text-[#D4AF37] transition-colors">Membership</a>
+          <a href="#affiliation" className="hover:text-[#D4AF37] transition-colors">Affiliation</a>
           <a href="#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a>
         </div>
 
@@ -63,6 +64,7 @@ export default function Navbar() {
             <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">About</a>
             <a href="#facilities" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Amenities</a>
             <a href="#membership" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Membership</a>
+            <a href="#affiliation" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Affiliation</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4AF37]">Contact</a>
             
             <div className="mt-12">

@@ -24,7 +24,7 @@ const facilities = [
 
 export default function Affiliation() {
   return (
-    <section className="py-24 md:py-32 px-4 md:px-12 bg-black border-t border-zinc-900 overflow-hidden">
+    <section id="affiliation" className="py-24 md:py-32 px-4 md:px-12 bg-black border-t border-zinc-900 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
           <motion.div
