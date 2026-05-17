@@ -46,16 +46,16 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="bg-zinc-900/50 p-8 rounded-2xl border border-[#D4AF37]/30">
-            <h2 className="text-2xl font-bold text-[#D4AF37] mb-6 uppercase tracking-tight">3. SPECIAL POLICY: NON-REFUNDABLE CLAUSE</h2>
+            <h2 className="text-2xl font-bold text-[#D4AF37] mb-6 uppercase tracking-tight">3. SPECIAL POLICY: NON-REFUNDABLE & NON-TRANSFERABLE CLAUSE</h2>
             <p className="leading-relaxed mb-6 font-semibold text-white">
-              By applying for membership or making any payment to Stellaar Family Club, you explicitly agree to the following strict financial terms:
+              By applying for membership or making any payment to Stellaar Family Club, you explicitly agree to the following strict financial and administrative terms:
             </p>
             <div className="space-y-4 border-l-2 border-[#D4AF37] pl-6">
               <p className="text-white font-medium">
-                ALL PAYMENTS MADE TO STELLAAR FAMILY CLUB (STELLAAR DESIGN STUDIO), INCLUDING BUT NOT LIMITED TO REGISTRATION FEES, MEMBERSHIP DEPOSITS, ANNUAL SUBSCRIPTIONS, AND EVENT BOOKINGS, ARE STRICTLY NON-REFUNDABLE.
+                ALL PAYMENTS MADE TO STELLAAR FAMILY CLUB (STELLAAR DESIGN STUDIO), INCLUDING BUT NOT LIMITED TO REGISTRATION FEES, MEMBERSHIP DEPOSITS, ANNUAL SUBSCRIPTIONS, AND EVENT BOOKINGS, ARE STRICTLY NON-REFUNDABLE AND NON-TRANSFERABLE.
               </p>
               <p className="text-sm text-zinc-400">
-                Under no circumstances shall the Club be liable to refund any amount once the transaction is completed. This applies regardless of membership usage, resignation, relocation, or termination of membership by the Club for violation of rules.
+                Under no circumstances shall the Club be liable to refund any amount or transfer the membership to another individual/entity once the transaction is completed. This applies regardless of membership usage, resignation, relocation, or termination of membership by the Club for violation of rules.
               </p>
             </div>
           </section>
