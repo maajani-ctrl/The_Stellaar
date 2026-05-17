@@ -5,21 +5,52 @@ import { motion } from 'framer-motion'
 
 const membershipPlans = [
   {
-    name: "Family Membership",
-    description: "Full access for the entire family.",
-    features: ["Swimming Pool", "Modern Gym", "Restaurant Access", "Banquet Priority"],
-    popular: true
-  },
-  {
-    name: "Couple Membership",
-    description: "Tailored for husband and wife.",
-    features: ["Swimming Pool", "Modern Gym", "Social Meetups", "Cafe Access"],
+    name: "Blue Membership",
+    duration: "1 Year",
+    description: "Perfect for families seeking a premium lifestyle experience with access to wellness, dining, and social amenities.",
+    features: [
+      "Husband + Wife Membership",
+      "Access for 2 Kids (up to 18 yrs)",
+      "Swimming Pool Access",
+      "Premium Gym & Steam Bath",
+      "Café & Lounge Access",
+      "Fine-Dine Restaurant Privileges",
+      "Member Events & Activities",
+      "Food & Salon Discounts"
+    ],
+    color: "#3b82f6", // Blue
     popular: false
   },
   {
-    name: "Elite Founding Member",
-    description: "Limited premium lifetime perks.",
-    features: ["VIP Concierge", "Private Party Lounge", "Lifetime Benefits", "Executive Networking"],
+    name: "Silver Membership",
+    duration: "3 Years",
+    description: "An elevated long-term membership experience offering luxury amenities, family recreation, and exclusive member benefits.",
+    features: [
+      "Husband + Wife Membership",
+      "Access for 2 Kids (up to 18 yrs)",
+      "Premium Lifestyle Amenities",
+      "Social & Networking Events",
+      "Food & Salon Privileges",
+      "Stellaar Select Benefits",
+      "Extended Membership Convenience"
+    ],
+    color: "#e2e8f0", // Silver/Slate
+    popular: true
+  },
+  {
+    name: "Gold Membership",
+    duration: "5 Years",
+    description: "The ultimate premium family club experience designed for members who desire luxury, exclusivity, and elite community engagement.",
+    features: [
+      "Husband + Wife Membership",
+      "Access for 2 Kids (up to 18 yrs)",
+      "Complete Club Amenities Access",
+      "Premium Dining & Wellness",
+      "Exclusive Lifestyle Experiences",
+      "Priority Community Engagement",
+      "Elite Long-Term Experience"
+    ],
+    color: "#D4AF37", // Gold
     popular: false
   }
 ]
@@ -71,10 +102,10 @@ export default function Membership() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-[#D4AF37] font-mono text-xs md:text-sm tracking-widest uppercase mb-4">Limited Membership Open</h2>
-          <h3 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight">JOIN THE ELITE</h3>
+          <h2 className="text-[#D4AF37] font-mono text-xs md:text-sm tracking-widest uppercase mb-4">Membership Plans</h2>
+          <h3 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight uppercase">Premium Family Club</h3>
           <p className="text-zinc-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Become part of Nagpur&apos;s most premium family club. Elevate your lifestyle with exclusive access to world-class wellness, dining, and community.
+            Where Families Connect, Celebrate & Belong. Choose the tier that best fits your legacy.
           </p>
         </div>
 
@@ -86,28 +117,61 @@ export default function Membership() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`p-8 md:p-10 rounded-2xl border ${plan.popular ? 'border-[#D4AF37] bg-gradient-to-b from-[#D4AF37]/10 to-transparent' : 'border-zinc-800 bg-zinc-900/50'} relative group hover:border-[#D4AF37]/50 transition-all`}
+              className={`p-8 md:p-10 rounded-2xl border transition-all duration-500 hover:scale-[1.02] flex flex-col ${
+                plan.popular 
+                ? 'border-[#D4AF37] bg-gradient-to-b from-[#D4AF37]/10 via-zinc-900/50 to-zinc-900/80' 
+                : 'border-zinc-800 bg-zinc-900/40 hover:border-zinc-700'
+              }`}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-10 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-tighter">
-                  Most Popular
+                <div className="absolute top-0 right-10 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-tighter shadow-lg">
+                  Elevated Experience
                 </div>
               )}
-              <h4 className="text-xl md:text-2xl font-bold mb-2">{plan.name}</h4>
-              <p className="text-zinc-500 mb-6 md:mb-8 text-xs md:text-sm">{plan.description}</p>
-              <ul className="space-y-3 md:space-y-4 mb-10">
+              
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-2 h-8 rounded-full" style={{ backgroundColor: plan.color }} />
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-bold">{plan.name}</h4>
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-60" style={{ color: plan.color }}>
+                      {plan.duration}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-zinc-500 text-xs md:text-sm leading-relaxed">{plan.description}</p>
+              </div>
+
+              <div className="h-[1px] w-full bg-zinc-800 mb-8" />
+
+              <ul className="space-y-4 mb-10 flex-1">
                 {plan.features.map((feature, fIdx) => (
-                  <li key={fIdx} className="flex items-center text-xs md:text-sm text-zinc-300">
-                    <svg className="w-4 h-4 text-[#D4AF37] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                    {feature}
+                  <li key={fIdx} className="flex items-start text-xs md:text-sm text-zinc-300 group">
+                    <div className="mr-3 mt-1 w-4 h-4 rounded-full border border-zinc-700 flex items-center justify-center shrink-0 group-hover:border-[#D4AF37] transition-colors">
+                      <svg className="w-2.5 h-2.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="group-hover:text-white transition-colors">{feature}</span>
                   </li>
                 ))}
               </ul>
+
+              <a 
+                href="#membership-form" 
+                className={`w-full py-4 rounded-xl text-center text-[10px] md:text-xs uppercase font-bold tracking-widest transition-all ${
+                  plan.popular 
+                  ? 'bg-[#D4AF37] text-black hover:bg-white' 
+                  : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white'
+                }`}
+              >
+                Choose {plan.name.split(' ')[0]}
+              </a>
             </motion.div>
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div id="membership-form" className="max-w-4xl mx-auto pt-10">
           <div className="bg-zinc-900 p-6 md:p-12 rounded-2xl md:rounded-3xl border border-zinc-800 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-[#D4AF37]" />
             <div className="relative z-10 text-center">
