@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
-import { appendLeadToSheet } from '@/lib/google-sheets'
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+import db from '@/lib/db'
+import { appendToLocalExcel } from '@/lib/local-excel'
 
 export async function POST(request: Request) {
   try {
@@ -19,18 +16,22 @@ export async function POST(request: Request) {
     const created_at = new Date().toISOString()
     const source = 'membership_inquiry'
 
-    // 1. Save to Supabase (SQL database)
-    const supabase = createClient(supabaseUrl, supabaseAnonKey)
-    const { error: dbError } = await supabase
-      .from('leads')
-      .insert([{ email, name, phone, source }])
-
-    if (dbError) {
-      console.error('Supabase insert error:', dbError)
+    // 1. Save to Local SQL Database (SQLite)
+    try {
+      const stmt = db.prepare('INSERT INTO leads (name, email, phone, source, created_at) VALUES (?, ?, ?, ?, ?)')
+      stmt.run(name, email, phone, source, created_at)
+      console.log('Lead saved to local SQL database.')
+    } catch (dbError) {
+      console.error('Local SQL insert error:', dbError)
     }
 
-    // 2. Save to Google Sheets (fire-and-forget)
-    appendLeadToSheet({ name, email, phone, source, created_at })
+    // 2. Save to Local Excel (CSV)
+    try {
+      await appendToLocalExcel({ name, email, phone, source, created_at })
+      console.log('Lead appended to local Excel (CSV).')
+    } catch (excelError) {
+      console.error('Local Excel append error:', excelError)
+    }
 
     return NextResponse.json({ success: true })
   } catch (err) {

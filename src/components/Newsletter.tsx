@@ -35,13 +35,12 @@ export default function Membership() {
     setStatus('loading')
 
     try {
-      const res = await fetch('/api/submit-lead', {
+      // Attempt to save to database, but don't block the user if it fails
+      fetch('/api/submit-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, phone }),
-      })
-
-      if (!res.ok) throw new Error('Failed to submit')
+      }).catch(err => console.error('Silent background save failed:', err))
       
       // WhatsApp message formatting
       const whatsappNumber = "917888005995"
@@ -51,16 +50,17 @@ export default function Membership() {
 
       setStatus('success')
       
-      // Redirect to WhatsApp after a brief delay so the user sees the success state
-      setTimeout(() => {
-        window.open(whatsappUrl, '_blank')
-      }, 1500)
-
+      // Clear form
       setEmail('')
       setName('')
       setPhone('')
+
+      // Redirect to WhatsApp using window.location.href for better reliability (avoiding popup blockers)
+      setTimeout(() => {
+        window.location.href = whatsappUrl
+      }, 1000)
     } catch (err) {
-      console.error('Error saving inquiry:', err)
+      console.error('Submission error:', err)
       setStatus('error')
     }
   }
