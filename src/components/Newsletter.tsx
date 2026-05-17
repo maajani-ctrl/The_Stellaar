@@ -102,8 +102,8 @@ export default function Membership() {
       {/* Cinematic Family Background with Fade */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" 
-          alt="Family Lifestyle Background"
+          src="https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=2070&auto=format&fit=crop" 
+          alt="Premium Family Lifestyle"
           fill
           className="object-cover opacity-100 brightness-100 grayscale-0"
           priority
