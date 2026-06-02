@@ -19,23 +19,33 @@ The club offers a wide range of world-class facilities:
 
 ## Technical Architecture
 The website is built using a modern, high-performance tech stack:
-- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
 - **Frontend Library:** [React 19](https://react.dev/)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **Icons:** [Lucide React](https://lucide.dev/)
-- **Backend/Database:** [Supabase](https://supabase.com/)
+- **Backend/Database:** 
+  - **Local SQL:** SQLite via `better-sqlite3` (for local lead persistence).
+  - **Local Excel:** CSV-based logging for easy manual exports.
+  - **Cloud (Planned):** [Supabase](https://supabase.com/) and [Google Sheets API](https://developers.google.com/sheets/api).
 - **Language:** TypeScript
 
+## Data Pipeline
+1. **User Submission:** Form data is sent to `/api/submit-lead`.
+2. **Local Persistence:** Data is stored in `data/leads.db` (SQLite) and `data/leads.csv`.
+3. **Immediate Conversion:** User is redirected to WhatsApp with a pre-filled message containing their details for instant follow-up.
+
 ## Project Structure
-- `src/app/`: Contains the main layout and home page.
+- `src/app/`: Main layout, home page, and API routes.
 - `src/components/`: Modular UI components:
-  - `Hero.tsx`: High-impact landing section.
-  - `About.tsx`: Vision and legacy information.
-  - `Gallery.tsx`: Showcase of club amenities (Facilities).
-  - `Newsletter.tsx`: Membership inquiries and newsletter signup.
-- `src/lib/`: Configuration for external services like Supabase.
-- `public/assets/`: Houses all static media including images, videos, and PDF brochures.
+  - `Hero.tsx`: Cinematic landing section with video background.
+  - `About.tsx`: Vision and legacy details.
+  - `Gallery.tsx`: Showcase of club amenities.
+  - `Newsletter.tsx`: Membership tier selection and lead form.
+  - `Affiliation.tsx`: Partner club details.
+- `src/lib/`: Abstraction for database, Excel, and Google Sheets logic.
+- `public/assets/`: Static media assets (videos, images, PDF brochures).
+- `data/`: Local storage for SQLite and CSV files.
 
 ## Contact Information
 - **Member Inquiries:** +91 8668647116
@@ -44,4 +54,4 @@ The website is built using a modern, high-performance tech stack:
 - **WhatsApp:** [Direct Link](https://wa.me/917888005995)
 
 ---
-*Last Updated: May 17, 2026*
+*Last Updated: June 2, 2026*
