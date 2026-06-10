@@ -9,11 +9,23 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.107.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tiptap/extension-color": "^3.24.0",
+    "@tiptap/extension-image": "^3.24.0",
+    "@tiptap/extension-link": "^3.24.0",
+    "@tiptap/extension-text-style": "^3.24.0",
+    "@tiptap/extension-underline": "^3.24.0",
+    "@tiptap/pm": "^3.24.0",
+    "@tiptap/react": "^3.24.0",
+    "@tiptap/starter-kit": "^3.24.0",
     "better-sqlite3": "^12.10.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "googleapis": "^171.4.0",
-    "lucide-react": "^1.16.0",
+    "isomorphic-dompurify": "^3.16.0",
+    "lucide-react": "^1.17.0",
     "next": "^16.2.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -25,9 +37,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "axios": "^1.17.0",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "^5"
   }
 }

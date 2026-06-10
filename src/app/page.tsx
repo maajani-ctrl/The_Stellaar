@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Facilities from '@/components/Gallery'
+import BlogPreview from '@/components/BlogPreview'
 import Membership from '@/components/Newsletter'
 import Affiliation from '@/components/Affiliation'
 import Navbar from '@/components/Navbar'
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Facilities />
+      <BlogPreview />
       <Membership />
       <Affiliation />
       <Footer />

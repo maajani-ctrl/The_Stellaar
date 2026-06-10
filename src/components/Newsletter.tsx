@@ -255,7 +255,7 @@ export default function Membership() {
               )}
 
               <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col items-center">
-                <p className="text-zinc-500 text-sm mb-4 uppercase tracking-widest font-bold">Manual Registration</p>
+                <p className="text-zinc-500 text-sm mb-4 uppercase tracking-widest font-bold">Offline Application</p>
                 <a 
                   href="/assets/STELLAAR FAMILY CLUB FORM.pdf" 
                   target="_blank"
