@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Privacy Policy | The Stellaar - Premium Family Club of Nagpur',
+  title: 'Privacy Policy | The Stellaar - Premium Family Club',
   description: 'Privacy Policy and Membership Terms for The Stellaar - Premium Family Club of Nagpur.',
 }
 
