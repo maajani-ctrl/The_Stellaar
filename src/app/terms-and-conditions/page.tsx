@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Terms and Conditions | The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd',
-  description: 'Membership Terms and Conditions for The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd, Nagpur.',
+  title: 'Terms and Conditions | The Stellaar - Premium Family Club of Nagpur',
+  description: 'Membership Terms and Conditions for The Stellaar - Premium Family Club of Nagpur.',
 }
 
 export default function TermsAndConditions() {

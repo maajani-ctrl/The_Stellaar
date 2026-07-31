@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Privacy Policy | The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd',
-  description: 'Privacy Policy and Membership Terms for The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd, Nagpur.',
+  title: 'Privacy Policy | The Stellaar - Premium Family Club of Nagpur',
+  description: 'Privacy Policy and Membership Terms for The Stellaar - Premium Family Club of Nagpur.',
 }
 
 export default function PrivacyPolicy() {
