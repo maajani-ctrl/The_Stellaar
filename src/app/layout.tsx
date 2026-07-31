@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Stellaar | A Unit of Triovertical Megaventure Pvt Ltd",
+  title: "The Stellaar | Premium Family Club",
   description: "Experience luxury, wellness, and exclusivity at The Stellaar - Nagpur's new standard of family living. Pool, Gym, Dining, and elite networking.",
   icons: {
     icon: '/web_logo.png',

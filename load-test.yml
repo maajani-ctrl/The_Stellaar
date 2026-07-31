@@ -1,0 +1,28 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 10
+      arrivalRate: 5
+      name: Warm up
+    - duration: 20
+      arrivalRate: 20
+      name: Sustained load
+    - duration: 10
+      arrivalRate: 50
+      name: Spike
+  environments:
+    production:
+      target: 'http://localhost:3000'
+
+scenarios:
+  - name: "Browsing and Data Fetching"
+    flow:
+      - get:
+          url: "/"
+      - think: 1
+      - get:
+          url: "/#membership"
+      - get:
+          url: "/api/blogs"
+      - get:
+          url: "/api/staff"
