@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold text-white mb-6 uppercase tracking-tight">1. Introduction</h2>
             <p className="leading-relaxed mb-4">
-              Welcome to The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd. We are committed to protecting your personal information and your right to privacy. This Privacy Policy applies to all information collected through our website, mobile application, and/or any related services, sales, marketing, or events.
+              Welcome to The Stellaar - Premium Family Club. We are committed to protecting your personal information and your right to privacy. This Privacy Policy applies to all information collected through our website, mobile application, and/or any related services, sales, marketing, or events.
             </p>
             <p className="leading-relaxed text-zinc-400 italic">
               Please read this privacy policy carefully as it will help you understand what we do with the information that we collect.
@@ -48,11 +48,11 @@ export default function PrivacyPolicy() {
           <section className="bg-zinc-900/50 p-8 rounded-2xl border border-[#D4AF37]/30">
             <h2 className="text-2xl font-bold text-[#D4AF37] mb-6 uppercase tracking-tight">3. SPECIAL POLICY: NON-REFUNDABLE & NON-TRANSFERABLE CLAUSE</h2>
             <p className="leading-relaxed mb-6 font-semibold text-white">
-              By applying for membership or making any payment to The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd, you explicitly agree to the following strict financial and administrative terms:
+              By applying for membership or making any payment to The Stellaar - Premium Family Club, you explicitly agree to the following strict financial and administrative terms:
             </p>
             <div className="space-y-4 border-l-2 border-[#D4AF37] pl-6">
               <p className="text-white font-medium">
-                ALL PAYMENTS MADE TO THE STELLAAR - A UNIT OF TRIOVERTICAL MEGAVENTURE PVT LTD, INCLUDING BUT NOT LIMITED TO REGISTRATION FEES, MEMBERSHIP DEPOSITS, ANNUAL SUBSCRIPTIONS, AND EVENT BOOKINGS, ARE STRICTLY NON-REFUNDABLE AND NON-TRANSFERABLE.
+                ALL PAYMENTS MADE TO THE STELLAAR - PREMIUM FAMILY CLUB, INCLUDING BUT NOT LIMITED TO REGISTRATION FEES, MEMBERSHIP DEPOSITS, ANNUAL SUBSCRIPTIONS, AND EVENT BOOKINGS, ARE STRICTLY NON-REFUNDABLE AND NON-TRANSFERABLE.
               </p>
               <p className="text-sm text-zinc-400">
                 Under no circumstances shall the Club be liable to refund any amount or transfer the membership to another individual/entity once the transaction is completed. This applies regardless of membership usage, resignation, relocation, or termination of membership by the Club for violation of rules.
@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold text-white mb-6 uppercase tracking-tight">7. Governing Law</h2>
             <p className="leading-relaxed mb-4">
-              This Privacy Policy and your relationship with The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd shall be governed by the laws of India. Any disputes arising out of this policy shall be subject to the exclusive jurisdiction of the courts located in Nagpur, Maharashtra.
+              This Privacy Policy and your relationship with The Stellaar - Premium Family Club shall be governed by the laws of India. Any disputes arising out of this policy shall be subject to the exclusive jurisdiction of the courts located in Nagpur, Maharashtra.
             </p>
           </section>
 
@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
               If you have questions or comments about this policy, you may contact our administrative office:
             </p>
             <div className="text-zinc-400 space-y-1 text-sm md:text-base">
-              <p className="text-[#D4AF37] font-bold">The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd</p>
+              <p className="text-[#D4AF37] font-bold">The Stellaar - Premium Family Club</p>
               <p>79, Prashant Nagar,</p>
               <p>Behind Mount Carmel School,</p>
               <p>Ajni, Nagpur, Maharashtra 440015</p>
@@ -113,7 +113,7 @@ export default function PrivacyPolicy() {
 
         <div className="mt-20 pt-12 border-t border-zinc-900 text-center">
           <p className="text-zinc-600 text-xs uppercase tracking-widest">
-            © 2026 Triovertical Megaventure Pvt Ltd. All rights reserved.
+            © 2026 Premium Family Club. All rights reserved.
           </p>
         </div>
       </div>
