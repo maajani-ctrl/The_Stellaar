@@ -26,7 +26,7 @@ export default function TermsAndConditions() {
           <section>
             <h2 className="text-xl md:text-2xl font-bold text-white mb-6 uppercase tracking-widest border-b border-zinc-800 pb-2">1. Agreement to Terms</h2>
             <p className="leading-relaxed mb-4 text-sm md:text-base">
-              These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and <strong>The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd</strong> (“we,” “us” or “our”), concerning your access to and use of our facilities, services, and membership privileges.
+              These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and <strong>The Stellaar - Premium Family Club</strong> (“we,” “us” or “our”), concerning your access to and use of our facilities, services, and membership privileges.
             </p>
             <p className="leading-relaxed text-zinc-400 text-sm italic">
               By accessing the Club or using our Services, you acknowledge that you have read, understood, and agreed to be bound by all of these Terms and Conditions.
@@ -48,7 +48,7 @@ export default function TermsAndConditions() {
           <section className="bg-zinc-900/50 p-6 md:p-10 rounded-2xl border border-[#D4AF37]/30 shadow-2xl">
             <h2 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-6 uppercase tracking-widest">3. FINANCIAL POLICY: NON-REFUNDABLE CLAUSE</h2>
             <p className="leading-relaxed mb-6 font-semibold text-white text-sm md:text-base">
-              The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd maintains a strict zero-refund policy to ensure the sustainability and exclusivity of our community.
+              The Stellaar - Premium Family Club maintains a strict zero-refund policy to ensure the sustainability and exclusivity of our community.
             </p>
             <div className="space-y-4 border-l-2 border-[#D4AF37] pl-6">
               <p className="text-white font-bold uppercase leading-relaxed text-sm md:text-base">
@@ -76,7 +76,7 @@ export default function TermsAndConditions() {
           <section>
             <h2 className="text-xl md:text-2xl font-bold text-white mb-6 uppercase tracking-widest border-b border-zinc-800 pb-2">5. Limitation of Liability</h2>
             <p className="leading-relaxed mb-4 text-sm md:text-base text-zinc-400">
-              The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd shall not be held liable for any personal injury, loss, or damage to personal property sustained by members or guests while on the premises. Use of all amenities, including the Gymnasium and Swimming Pool, is at the member&apos;s own risk.
+              The Stellaar - Premium Family Club shall not be held liable for any personal injury, loss, or damage to personal property sustained by members or guests while on the premises. Use of all amenities, including the Gymnasium and Swimming Pool, is at the member&apos;s own risk.
             </p>
           </section>
 
@@ -100,7 +100,7 @@ export default function TermsAndConditions() {
               For any legal inquiries or clarifications regarding these terms, please contact our administrative office:
             </p>
             <div className="text-zinc-400 space-y-2 text-sm md:text-base">
-              <p className="text-[#D4AF37] font-bold">The Stellaar - A Unit of Triovertical Megaventure Pvt Ltd</p>
+              <p className="text-[#D4AF37] font-bold">The Stellaar - Premium Family Club</p>
               <p>79, Prashant Nagar,</p>
               <p>Behind Mount Carmel School,</p>
               <p>Ajni, Nagpur, Maharashtra 440015</p>
@@ -112,7 +112,7 @@ export default function TermsAndConditions() {
 
         <div className="mt-20 pt-12 border-t border-zinc-900 text-center">
           <p className="text-zinc-600 text-xs uppercase tracking-widest">
-            © 2026 Triovertical Megaventure Pvt Ltd. All rights reserved.
+            © 2026 Premium Family Club. All rights reserved.
           </p>
         </div>
       </div>
